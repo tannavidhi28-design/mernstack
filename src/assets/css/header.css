@@ -1,0 +1,9 @@
+.header{
+    background-color: rgb(45, 127, 130);
+    border: 1px solid snow;
+    border-radius: 10px;
+    height: 180px;
+    text-align: center;
+    position: static;
+    margin-bottom: 10px;
+}
