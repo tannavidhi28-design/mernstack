@@ -46,6 +46,7 @@ import { FormDemo6 } from './components/form/FormDemo6'
 import { FormDemo7 } from './components/form/FormDemo7'
 import { Common } from './components/netflix/Common'
 import { FormDemo8 } from './components/form/FormDemo8'
+import { ApiDemo1 } from './components/api/ApiDemo1'
 //import './App.css'
 
 function App() {
@@ -110,6 +111,7 @@ function App() {
           <Route path='/formdemo7' element = {<FormDemo7/>}></Route>
           <Route path='/formdemo8' element = {<FormDemo8/>}></Route>
           <Route path='/common' element = {<Common/>}></Route>
+          <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
         </Routes>
     </div>
   )
