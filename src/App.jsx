@@ -47,6 +47,7 @@ import { FormDemo7 } from './components/form/FormDemo7'
 import { Common } from './components/netflix/Common'
 import { FormDemo8 } from './components/form/FormDemo8'
 import { ApiDemo1 } from './components/api/ApiDemo1'
+import { OmdbSearch } from './components/api/OmdbSearch'
 //import './App.css'
 
 function App() {
@@ -112,6 +113,7 @@ function App() {
           <Route path='/formdemo8' element = {<FormDemo8/>}></Route>
           <Route path='/common' element = {<Common/>}></Route>
           <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
+           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
         </Routes>
     </div>
   )
