@@ -19,7 +19,7 @@ export const OmdbSearch = () => {
     <div style={{ textAlign: "center" }} className="container">
       <h1>OmdbSearch</h1>
       <input type="text" onChange={(e)=>setmovieName(e.target.value)}></input>
-      <button onClick={searchMovie}>search movie</button>
+      <button onClick={searchMovie}>Search the movie</button>
        <div className="row">
       {movieList?.map((movie) => {
         return (
