@@ -1,20 +1,29 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Loader } from '../Loader'
 
 export const ApiDemo1 = () => {
   const [message, setmessage] = useState("");
   const [users, setusers] = useState([]);
+const [isLoading, setisLoading] = useState(false)
 
   const getUsers = async () => {
+    setisLoading(true)  
     const res = await axios.get("https://node5.onrender.com/user/user/");
 
     setmessage(res.data.message);
     setusers(res.data.data);
+    setisLoading(false)  
   };
-
+  useEffect(()=>{
+        getUsers()
+    },[])
   return (
     <div style={{ textAlign: "center" }}>
       <h1>ApiDemo1</h1>
+       {
+            isLoading && <Loader/>
+        }
       <button onClick={getUsers}>GET USERS</button>
       <h3>{message}</h3>
 

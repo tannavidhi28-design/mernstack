@@ -5,7 +5,7 @@ export const UseEffectDemo1 = () => {
     useEffect(()=>{
         console.log("use effect")
     },[count]) 
-    //count -->cahnge -->useEffect will call again..
+    //count -->change -->useEffect will call again..
     //()=>{} -->call back func
     //[] -->dep array..
 

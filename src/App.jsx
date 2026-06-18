@@ -51,12 +51,30 @@ import { OmdbSearch } from './components/api/OmdbSearch'
 import { MovieDetails } from './components/api/MovieDetails'
 import { ApiDemo2 } from './components/api/ApiDemo2'
 import { ApiDemo3 } from './components/api/ApiDemo3'
+import { ToastContainer } from 'react-toastify'
+import { Bounce } from 'react-toastify/unstyled'
+import { Api } from './components/api/Api'
+
 //import './App.css'
 
 function App() {
  
   return (
    <div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+
+      />
       {/* <h1>Hello!</h1>
       <h4>AT A TIME WE CAN RETURN ONLY 1 ELEMENT</h4>
       <h4>EVERY TAG MUST HAVE CLOSING TAG</h4>
@@ -118,6 +136,7 @@ function App() {
           <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
           <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
           <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
+          <Route path='/api' element = {<Api/>}></Route>
           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
           <Route path='/moviedetails/:imdbID' element={<MovieDetails/>}></Route>
         </Routes>
