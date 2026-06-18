@@ -48,6 +48,9 @@ import { Common } from './components/netflix/Common'
 import { FormDemo8 } from './components/form/FormDemo8'
 import { ApiDemo1 } from './components/api/ApiDemo1'
 import { OmdbSearch } from './components/api/OmdbSearch'
+import { MovieDetails } from './components/api/MovieDetails'
+import { ApiDemo2 } from './components/api/ApiDemo2'
+import { ApiDemo3 } from './components/api/ApiDemo3'
 //import './App.css'
 
 function App() {
@@ -113,7 +116,10 @@ function App() {
           <Route path='/formdemo8' element = {<FormDemo8/>}></Route>
           <Route path='/common' element = {<Common/>}></Route>
           <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
-           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
+          <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
+          <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
+          <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
+          <Route path='/moviedetails/:imdbID' element={<MovieDetails/>}></Route>
         </Routes>
     </div>
   )

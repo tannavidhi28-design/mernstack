@@ -1,40 +1,57 @@
-import axios from "axios";
-import React, { useState } from "react";
+import axios from 'axios';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export const OmdbSearch = () => {
-  const [movieList, setmovieList] = useState([]);
-  const [movieName, setmovieName] = useState("")
-  const searchMovie = async () => {
 
-    const res = await axios.get(
-      `http://www.omdbapi.com/?apikey=f3325309&s=${movieName}`,
-    );
-    console.log(res); //axios object
-    //api response..
-    console.log(res.data); //api respponse..
-    setmovieList(res.data.Search);
+    const [movieList, setmovieList] = useState([]);
+    const [movieName, setmovieName] = useState("");
 
-  };
-  return (
-    <div style={{ textAlign: "center" }} className="container">
-      <h1>OmdbSearch</h1>
-      <input type="text" onChange={(e)=>setmovieName(e.target.value)}></input>
-      <button onClick={searchMovie}>Search the movie</button>
-       <div className="row">
-      {movieList?.map((movie) => {
-        return (
-          <div className="col-md-4 mb-3">
-            <div className="card h-100">
-              <img src={movie.Poster} alt={movie.Title} className="card-img-top" />
-              <div className="card-body">
-                <h5 className="card-title">{movie.Title}</h5>
-                <h5 className="card-title">{movie.Year}</h5>
-              </div>
-            </div>
-          </div>
+    const searchMovie = async () => {
+
+        const res = await axios.get(
+            `https://www.omdbapi.com/?apikey=f3325309&s=${movieName}`
         );
-      })}
-      </div>
-    </div>
-  );
-};
+
+        console.log(res.data);
+        setmovieList(res.data.Search);
+    }
+
+    return (
+        <div style={{ textAlign: "center" }}>
+            <h1>OmdbSearch</h1>
+
+            <input
+                type='text'
+                onChange={(e) => setmovieName(e.target.value)}
+            />
+
+            <button onClick={searchMovie}>
+                Search Movie
+            </button>
+
+            <div className='row'>
+                {
+                    movieList?.map((movie) => {
+                        return (
+                            <div key={movie.imdbID}>
+                                <img
+                                    src={movie.Poster}
+                                    alt={movie.Title}
+                                    height="200px"
+                                />
+
+                                <h5>{movie.Title}</h5>
+                                <h5>{movie.Year}</h5>
+
+                                <Link to={`/moviedetails/${movie.imdbID}`}>
+                                    Details
+                                </Link>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    )
+}
