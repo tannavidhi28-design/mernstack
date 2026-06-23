@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+   const navigate = useNavigate()
+  const logoutHandler = () => {
+
+    localStorage.clear()
+    navigate("/login")
+  }
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -196,7 +203,14 @@ export const Navbar = () => {
                 Omdbsearch
                </Link>
             </li>
-            
+            <li class="nav-item active">
+              <Link class="nav-link" to="/login">
+                Login
+               </Link>
+            </li>
+             <li class="nav-item active">
+              <button onClick={logoutHandler}>Logout</button>
+            </li>
           </ul>
         </div>
       </nav>

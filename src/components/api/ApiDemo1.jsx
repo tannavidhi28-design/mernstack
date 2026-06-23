@@ -13,12 +13,15 @@ export const ApiDemo1 = () => {
 
   const getUserDetail =async(id)=>{
     //api...
+    isLoading(true)
     const res = await axios.get(`https://node5.onrender.com/user/user/${id}`)
+
     console.log("res..",res)
     //res.data --->api response
-    //res.data.data -->object ..
+    //res.data.data --> json object ..
     setsingleUser(res.data.data)
     setshow(true)
+    isLoading(false)
   }
   const handleClose =()=>{
     setshow(false)

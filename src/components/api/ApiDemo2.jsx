@@ -4,11 +4,11 @@ import React from 'react'
 export const ApiDemo2 = () => {
     const adduser = async() =>
     {
-        const userObj={
+      const userObj={
       name: "amit",
       age: 23,
       email: "vidhii@gmail.com",
-      password: "amit123",
+      password: "vidhi123",
       isActive: true,
      };
 

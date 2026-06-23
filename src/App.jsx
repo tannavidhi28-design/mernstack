@@ -54,6 +54,7 @@ import { ApiDemo3 } from './components/api/ApiDemo3'
 import { ToastContainer } from 'react-toastify'
 import { Bounce } from 'react-toastify/unstyled'
 import { Api } from './components/api/Api'
+import { Login } from './components/api/Login'
 
 //import './App.css'
 
@@ -139,6 +140,7 @@ function App() {
           <Route path='/api' element = {<Api/>}></Route>
           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
           <Route path='/moviedetails/:imdbID' element={<MovieDetails/>}></Route>
+          <Route path='/login' element = {<Login/>}></Route>
         </Routes>
     </div>
   )
