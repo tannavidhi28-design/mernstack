@@ -55,6 +55,8 @@ import { ToastContainer } from 'react-toastify'
 import { Bounce } from 'react-toastify/unstyled'
 import { Api } from './components/api/Api'
 import { Login } from './components/api/Login'
+import { Api1 } from './components/api/Api1'
+import { UpdateUser } from './components/api/UpdateUser'
 
 //import './App.css'
 
@@ -138,9 +140,11 @@ function App() {
           <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
           <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
           <Route path='/api' element = {<Api/>}></Route>
+          <Route path='/api1' element = {<Api1/>}></Route>
           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
           <Route path='/moviedetails/:imdbID' element={<MovieDetails/>}></Route>
           <Route path='/login' element = {<Login/>}></Route>
+           <Route path="/updateuser/:id" element ={<UpdateUser/>}></Route>
         </Routes>
     </div>
   )
