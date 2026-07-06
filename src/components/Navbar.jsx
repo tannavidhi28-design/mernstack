@@ -129,7 +129,7 @@ export const Navbar = () => {
               <Link class="nav-link" to="/book">
                 Book
                </Link>
-            </li>*/}
+            </li>
 
              <li class="nav-item active">
               <Link class="nav-link" to="/formdemo1">
@@ -172,7 +172,7 @@ export const Navbar = () => {
               <Link class="nav-link" to="/formdemo7">
                 FormDemo7
                </Link>
-            </li>
+            </li>*/}
              
               <li class="nav-item active">
               <Link class="nav-link" to="/formdemo8">
@@ -210,6 +210,36 @@ export const Navbar = () => {
               <Link class="nav-link" to="/omdbsearch">
                 Omdbsearch
                </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to="/addproducts">
+                AddProducts
+               </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to="/userefdemo1">
+                UseRefDemo1
+               </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to="/userefdemo2">
+                UseRefDemo2
+               </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to="/useref1">
+                UseRef1
+               </Link>
+            </li>
+             <li class="nav-item active">
+              <Link class="nav-link" to="/mobileparent">
+                mobileparent
+              </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to="/waterflow">
+                waterflow
+              </Link>
             </li>
             <li class="nav-item active">
               <Link class="nav-link" to="/login">

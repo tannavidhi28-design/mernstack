@@ -57,6 +57,12 @@ import { Api } from './components/api/Api'
 import { Login } from './components/api/Login'
 import { Api1 } from './components/api/Api1'
 import { UpdateUser } from './components/api/UpdateUser'
+import { AddProducts } from './components/api/AddProducts'
+import { UseRefDemo1 } from './components/UseRefDemo1'
+import { UseRefDemo2 } from './components/UseRefDemo2'
+import { UseRef1 } from './components/UseRef1'
+import { MobileParent } from './components/MobileParent'
+import { WaterFlow } from './components/WaterFlow'
 
 //import './App.css'
 
@@ -144,7 +150,13 @@ function App() {
           <Route path='/omdbsearch' element = {<OmdbSearch/>}></Route>
           <Route path='/moviedetails/:imdbID' element={<MovieDetails/>}></Route>
           <Route path='/login' element = {<Login/>}></Route>
-           <Route path="/updateuser/:id" element ={<UpdateUser/>}></Route>
+          <Route path="/updateuser/:id" element ={<UpdateUser/>}></Route>
+          <Route path="addproducts" element ={<AddProducts/>}></Route>
+          <Route path="userefdemo1" element ={<UseRefDemo1/>}></Route>
+          <Route path="userefdemo2" element ={<UseRefDemo2/>}></Route>
+          <Route path="useref1" element ={<UseRef1/>}></Route>
+          <Route path="/mobileparent" element = {<MobileParent/>}></Route>
+          <Route path="/waterflow" element = {<WaterFlow/>}></Route>
         </Routes>
     </div>
   )
